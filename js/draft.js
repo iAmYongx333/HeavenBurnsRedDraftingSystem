@@ -79,15 +79,24 @@ let memoriaInfo =
         Irie: ["SS1"]
     },
 ]
-let test = document.getElementById("test");
-
+let draft = document.getElementById("draft");
+let input = '';
+//input += `<ul class="list-group list-group-horizontal">`
 for(let i = 0; i<memoriaInfo.length;i++){
+    
 let arrayobjectkey = Object.keys(memoriaInfo[i])
 for(let j = 1; j<arrayobjectkey.length; j++){
-    test.innerHTML += arrayobjectkey[j]
+    //input = ''
+    //input += `<ul class="list-group list-group-horizontal">`
+    // input += arrayobjectkey[j]
     for(let k = 0; k<memoriaInfo[i][arrayobjectkey[j]].length; k++){
-        test.innerHTML += ` <li class="list-group-item">` + memoriaInfo[i][arrayobjectkey[j]][k] + `</li>`
+        
+        //input += ` <li class="list-group-item"> <img src="../images/` + arrayobjectkey[j] + memoriaInfo[i][arrayobjectkey[j]][k] + `.png" class="img-fluid" alt="` + memoriaInfo[i][arrayobjectkey[j]][k]  + `">`+ `</li>`
+        input += `<div class="col-2">  <img src="../images/` + arrayobjectkey[j] + memoriaInfo[i][arrayobjectkey[j]][k] + `.png" class="img-fluid" alt="` + memoriaInfo[i][arrayobjectkey[j]][k]  + `"> </div>`
     }
-    test.innerHTML += "\n"
+//  input += `</ul>`
+//     draft.innerHTML += input
 }
 }
+ // input += `</ul>`
+    draft.innerHTML += input
