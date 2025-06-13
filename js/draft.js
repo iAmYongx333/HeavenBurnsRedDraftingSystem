@@ -167,15 +167,32 @@ function lockIn() {
   }
 
   const step = draftOrder[draftStep];
-  const imageHTML = `<img src="../images/${selectedCharacter}${selectedStyle}.webp" class="img-fluid" alt="${selectedStyle}" width="184px" height="184px">`;
   const name = `${selectedCharacter} ${selectedStyle}`;
 
   if (step.team === "A" && step.type === "ban") {
+    document.getElementById(`banA${step.slot}card`).classList.remove("border-warning")
+    document.getElementById(`banA${step.slot}card`).classList.add("border-danger")
+    let imageHTML = `<img src="../images/${selectedCharacter}${selectedStyle}.webp" class="img-fluid" alt="${selectedStyle}" width="66px" height="66px" style="filter:grayscale(100%)">`;
     document.getElementById(`banA${step.slot}img`).innerHTML = imageHTML;
     document.getElementById(`banA${step.slot}text`).textContent = name;
   } else if (step.team === "B" && step.type === "ban") {
+    document.getElementById(`banB${step.slot}card`).classList.remove("border-warning")
+    document.getElementById(`banB${step.slot}card`).classList.add("border-danger")
+    let imageHTML = `<img src="../images/${selectedCharacter}${selectedStyle}.webp" class="img-fluid" alt="${selectedStyle}" width="66px" height="66px" style="filter:grayscale(100%)">`;
     document.getElementById(`banB${step.slot}img`).innerHTML = imageHTML;
     document.getElementById(`banB${step.slot}text`).textContent = name;
+  } else if (step.team === "A" && step.type === "pick") {
+    document.getElementById(`pickA${step.slot}card`).classList.remove("border-warning")
+    document.getElementById(`pickA${step.slot}card`).classList.add("border-success")
+    let imageHTML = `<img src="../images/${selectedCharacter}${selectedStyle}.webp" class="img-fluid" alt="${selectedStyle}" width="66px" height="66px">`;
+    document.getElementById(`pickA${step.slot}img`).innerHTML = imageHTML;
+    document.getElementById(`pickA${step.slot}text`).textContent = name;
+  } else if (step.team === "B" && step.type === "pick") {
+    document.getElementById(`pickB${step.slot}card`).classList.remove("border-warning")
+    document.getElementById(`pickB${step.slot}card`).classList.add("border-success")
+    let imageHTML = `<img src="../images/${selectedCharacter}${selectedStyle}.webp" class="img-fluid" alt="${selectedStyle}" width="66px" height="66px">`;
+    document.getElementById(`pickB${step.slot}img`).innerHTML = imageHTML;
+    document.getElementById(`pickB${step.slot}text`).textContent = name;
   }
   
   document.getElementById(`button${selectedCharacter}${selectedStyle}`).disabled = true;
@@ -187,6 +204,8 @@ function lockIn() {
   draftStep++;
   selectedCharacter = null;
   selectedStyle = null;
+  document.getElementById(`${draftOrder[draftStep].type}${draftOrder[draftStep].team}${draftOrder[draftStep].slot}card`).classList.remove("border-dark")
+  document.getElementById(`${draftOrder[draftStep].type}${draftOrder[draftStep].team}${draftOrder[draftStep].slot}card`).classList.add("border-warning")
   document.getElementById("selectionimg").src = "";
   document.getElementById("selectionimg").alt = "";
   document.getElementById("selectiontext").textContent = "";

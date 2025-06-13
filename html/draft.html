@@ -70,24 +70,33 @@
       </div>
     </div> -->
 
+       <!-- 8-column image draft area -->
    <div class="container-fluid">
   <div class="row">
-    <!-- 8-column image draft area -->
-    <div class="col-8 d-flex flex-wrap" id="draft"></div>
+ 
+    <div class="col-5 d-flex flex-wrap" id="draft"></div>
 
     <!-- Team A Picks/Bans (1 column) -->
-    <div class="col-1">
+    <div class="col-3">
       <div id="teamA">
-        <div class="card mb-2">
+        
+<div class="row">
+        <div class="col-4">
+
+        <div class="card mb-2 border border-3 border-warning" id="banA1card">
           <div id="banA1img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Ban #1</h5>
             <p class="card-text" id="banA1text"></p>
           </div>
         </div>
+
+        </div>
         <!-- Add more cards if needed -->
 
-        <div class="card mb-2">
+        <div class="col-4">
+
+        <div class="card mb-2 border border-3 border-dark" id="banA2card">
           <div id="banA2img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Ban #2</h5>
@@ -95,7 +104,11 @@
           </div>
         </div>
 
-        <div class="card mb-2">
+        </div>
+
+<div class="col-4">
+
+        <div class="card mb-2 border border-3 border-dark" id="banA3card">
           <div id="banA3img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Ban #3</h5>
@@ -103,83 +116,116 @@
           </div>
         </div>
 
-        <div class="card mb-2">
+</div>
+
+</div>
+
+
+<div class="row">
+
+  <div class="col-4">
+        <div class="card mb-2 border border-3 border-dark" id="pickA1card">
           <div id="pickA1img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Pick #1</h5>
             <p class="card-text" id="pickA1text"></p>
           </div>
         </div>
+        </div>
 
-        <div class="card mb-2">
+        <div class="col-4">
+        <div class="card mb-2 border border-3 border-dark" id="pickA2card">
           <div id="pickA2img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Pick #2</h5>
             <p class="card-text" id="pickA2text"></p>
           </div>
         </div>
+        </div>
 
-        <div class="card mb-2">
+        <div class="col-4">
+        <div class="card mb-2 border border-3 border-dark" id="pickA3card">
           <div id="pickA3img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Pick #3</h5>
             <p class="card-text" id="pickA3text"></p>
           </div>
         </div>
+        </div>
+</div>
 
-        <div class="card mb-2">
+<div class="row">
+
+  <div class="col-4">
+        <div class="card mb-2 border border-3 border-dark" id="banA4card">
           <div id="banA4img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Ban #4</h5>
             <p class="card-text" id="banA4text"></p>
           </div>
         </div>
+        </div>
 
-        <div class="card mb-2">
+        <div class="col-4">
+        <div class="card mb-2 border border-3 border-dark" id="banA5card">
           <div id="banA5img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Ban #5</h5>
             <p class="card-text" id="banA5text"></p>
           </div>
         </div>
+        </div>
 
-        <div class="card mb-2">
+        <div class="col-4">
+        <div class="card mb-2 border border-3 border-dark" id="banA6card">
           <div id="banA6img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Ban #6</h5>
             <p class="card-text" id="banA6text"></p>
           </div>
         </div>
+        </div>
 
-        <div class="card mb-2">
+</div>
+
+<div class="row">
+
+  <div class="col-4">
+        <div class="card mb-2 border border-3 border-dark" id="pickA4card">
           <div id="pickA4img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Pick #4</h5>
             <p class="card-text" id="pickA4text"></p>
           </div>
         </div>
+        </div>
 
-        <div class="card mb-2">
+        <div class="col-4">
+        <div class="card mb-2 border border-3 border-dark" id="pickA5card">
           <div id="pickA5img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Pick #5</h5>
             <p class="card-text" id="pickA5text"></p>
           </div>
         </div>
+        </div>
 
-        <div class="card mb-2">
+        <div class="col-4">
+        <div class="card mb-2 border border-3 border-dark" id="pickA6card">
           <div id="pickA6img"></div>
           <div class="card-body">
             <h5 class="card-title">Team A Pick #6</h5>
             <p class="card-text" id="pickA6text"></p>
           </div>
         </div>
+        </div>
 
       </div>
     </div>
+</div>
 
     <!-- Selection Area (2 columns) -->
-    <div class="col-2">
+    <div class="col-1">
       <div id="selection">
         <div class="card">
           <div class="card-body">
@@ -193,105 +239,145 @@
     </div>
 
     <!-- Team B Picks/Bans (1 column) -->
-    <div class="col-1">
+    <div class="col-3">
       <div id="teamB">
-        <div class="card mb-2">
+
+        <div class="row">
+        <div class="col-4">
+
+        <div class="card mb-2 border border-3 border-dark" id="banB1card">
           <div id="banB1img"></div>
           <div class="card-body">
             <h5 class="card-title">Team B Ban #1</h5>
             <p class="card-text" id="banB1text"></p>
           </div>
         </div>
+        </div>
         <!-- Add more cards if needed -->
 
-        <div class="card mb-2">
+         <div class="col-4">
+        <div class="card mb-2 border border-3 border-dark" id="banB2card">
   <div id="banB2img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Ban #2</h5>
     <p class="card-text" id="banB2text"></p>
   </div>
 </div>
+</div>
 
-<div class="card mb-2">
+ <div class="col-4">
+<div class="card mb-2 border border-3 border-dark" id="banB3card">
   <div id="banB3img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Ban #3</h5>
     <p class="card-text" id="banB3text"></p>
   </div>
 </div>
+</div>
 
-<div class="card mb-2">
+</div>
+
+<div class="row">
+
+  <div class="col-4">
+<div class="card mb-2 border border-3 border-dark" id="pickB1card">
   <div id="pickB1img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Pick #1</h5>
     <p class="card-text" id="pickB1text"></p>
   </div>
 </div>
+</div>
 
-<div class="card mb-2">
+<div class="col-4">
+<div class="card mb-2 border border-3 border-dark" id="pickB2card">
   <div id="pickB2img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Pick #2</h5>
     <p class="card-text" id="pickB2text"></p>
   </div>
 </div>
+</div>
 
-<div class="card mb-2">
+<div class="col-4">
+<div class="card mb-2 border border-3 border-dark" id="pickB3card">
   <div id="pickB3img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Pick #3</h5>
     <p class="card-text" id="pickB3text"></p>
   </div>
 </div>
+</div>
 
-<div class="card mb-2">
+</div>
+
+<div class="row">
+
+  <div class="col-4">
+<div class="card mb-2 border border-3 border-dark" id="banB4card">
   <div id="banB4img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Ban #4</h5>
     <p class="card-text" id="banB4text"></p>
   </div>
 </div>
+</div>
 
-<div class="card mb-2">
+<div class="col-4">
+<div class="card mb-2 border border-3 border-dark" id="banB5card">
   <div id="banB5img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Ban #5</h5>
     <p class="card-text" id="banB5text"></p>
   </div>
 </div>
+</div>
 
-<div class="card mb-2">
+<div class="col-4">
+<div class="card mb-2 border border-3 border-dark" id="banB6card">
   <div id="banB6img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Ban #6</h5>
     <p class="card-text" id="banB6text"></p>
   </div>
 </div>
+</div>
 
-<div class="card mb-2">
+</div>
+
+<div class="row">
+
+  <div class="col-4">
+<div class="card mb-2 border border-3 border-dark" id="pickB4card">
   <div id="pickB4img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Pick #4</h5>
     <p class="card-text" id="pickB4text"></p>
   </div>
 </div>
+</div>
 
-<div class="card mb-2">
+<div class="col-4">
+<div class="card mb-2 border border-3 border-dark" id="pickB5card">
   <div id="pickB5img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Pick #5</h5>
     <p class="card-text" id="pickB5text"></p>
   </div>
 </div>
+</div>
 
-<div class="card mb-2">
+<div class="col-4">
+<div class="card mb-2 border border-3 border-dark" id="pickB6card">
   <div id="pickB6img"></div>
   <div class="card-body">
     <h5 class="card-title">Team B Pick #6</h5>
     <p class="card-text" id="pickB6text"></p>
   </div>
 </div>
+</div>
 
+</div>
 
       </div>
     </div>
