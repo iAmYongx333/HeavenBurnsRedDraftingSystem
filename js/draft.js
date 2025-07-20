@@ -3,16 +3,16 @@ let memoriaInfo =
     {
         name: "31-A",
         Ruka: ["SS0","SS1", 'SS2', "SS3"],
-        Yuki: ["SS1", 'SS2', "SS3"],
+        Yuki: ["SS1", 'SS2', "SS3", "SS4"],
         Tsukasa: ["SS1", 'SS2', "SS3"],
         Karen: ["SS1", 'SS2', "SS3"],
-        Megumi: ["SS1", 'SS2', "SS3"],
-        Tama: ["SS1", 'SS2', "SS3","SS4"]
+        Megumi: ["SS1", 'SS2', "SS3", "SS4"],
+        Tama: ["SS1", 'SS2', "SS3","SS4", "SS5"]
     },
     {
         name: "31-B",
-        Aoi: ["SS1", 'SS2'],
-        Ichigo: ["SS1"],
+        Aoi: ["SS1", 'SS2', "SS3"],
+        Ichigo: ["SS1", "SS2"],
         Sumono: ["SS1", "SS2"],
         Seika: ["SS1", "SS2"],
         Kozue: ["SS1", "SS2"],
@@ -22,10 +22,10 @@ let memoriaInfo =
         name: "31-C",
         Wakki: ["SS1", "SS2"],
         Seira: ["SS1", "SS2"],
-        Tenne: ["SS1", "SS2"],
-        Bungo: ["SS1", "SS2"],
+        Tenne: ["SS1", "SS2", "SS3"],
+        Bungo: ["SS1", "SS2", "SS3"],
         Adel: ["SS1", "SS2"],
-        Mari: ["SS1", "SS2"]
+        Mari: ["SS1", "SS2", "SS3"]
     },
     {
         name: "30-G",
@@ -38,16 +38,16 @@ let memoriaInfo =
     },
     {
         name: "31-D",
-        Misato: ["SS1"],
+        Misato: ["SS1", "SS2"],
         Iroha: ["SS1"],
         Fubuki: ["SS1"],
         Risa: ["SS1", 'SS2'],
-        Akari: ["SS1"],
+        Akari: ["SS1", "SS2"],
         Aina: ["SS1"]
     },
     {
         name: "31-E",
-        Ichiko: ["SS1"],
+        Ichiko: ["SS1", "SS2"],
         Niina: ["SS1", 'SS2'],
         Minori: ["SS1"],
         Yotsuha: ["SS1"],
@@ -69,8 +69,8 @@ let memoriaInfo =
         Yingxia: ["SS1"],
         Irene: ["SS1"],
         VB: ["SS1"],
-        Maria: ["SS1"],
-        Sharo: ["SS1"]
+        Maria: ["SS1", "SS2"],
+        Sharo: ["SS1", "SS2"]
     },
     {
         name: "31-AB",
@@ -206,6 +206,8 @@ function lockIn() {
   selectedStyle = null;
   document.getElementById(`${draftOrder[draftStep].type}${draftOrder[draftStep].team}${draftOrder[draftStep].slot}card`).classList.remove("border-dark")
   document.getElementById(`${draftOrder[draftStep].type}${draftOrder[draftStep].team}${draftOrder[draftStep].slot}card`).classList.add("border-warning")
+  let textBanPick = draftOrder[draftStep].type.charAt(0).toUpperCase() + draftOrder[draftStep].type.slice(1);
+  document.getElementById(`announcement`).innerHTML = `Team ${draftOrder[draftStep].team} ${textBanPick} #${draftOrder[draftStep].slot}`;
   document.getElementById("selectionimg").src = "";
   document.getElementById("selectionimg").alt = "";
   document.getElementById("selectiontext").textContent = "";
